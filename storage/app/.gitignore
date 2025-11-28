@@ -2,4 +2,5 @@
 !private/
 !public/
 !src/
+!src/**
 !.gitignore
