@@ -33,9 +33,9 @@ new class extends Component {
                 setTimeout(() => {
                     $(this).fadeOut(1000, function() {
                         $('.sl_col').addClass('light-on');
-                        // setTimeout(() => {
-                        //     Livewire.dispatch('set_step', { step: 'confetti-balloon' });
-                        // }, 200);
+                        setTimeout(() => {
+                            Livewire.dispatch('set_step', { step: 'confetti-balloon' });
+                        }, 1200);
                     });
                 }, 1200);
             });
