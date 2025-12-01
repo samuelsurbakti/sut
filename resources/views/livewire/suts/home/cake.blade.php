@@ -6,6 +6,6 @@ new class extends Component {
     //
 }; ?>
 
-<div class="cb_root">
-
+<div>
+    //
 </div>

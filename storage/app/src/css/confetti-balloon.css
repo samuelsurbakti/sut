@@ -1,0 +1,5 @@
+.cb_root {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(hsl(var(--sl-hue),var(--sl-sat),20%),hsl(var(--sl-hue),var(--sl-sat),5%));
+}

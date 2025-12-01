@@ -1,24 +1,33 @@
 <?php
 
+use Livewire\Attributes\On;
 use Livewire\Volt\Component;
 use Livewire\Attributes\Layout;
 
 new #[Layout('ui.layouts.app')] class extends Component {
-    //
+    public $step = 'switch-lamp';
+
+    #[On('set_step')]
+    public function set_step($step)
+    {
+        $this->step = $step;
+    }
 }; ?>
 
 <div>
-    <main class="sdtl_container">
-        <div class="sdtl_col sdtl_col--dark">
-            <button id="btn2" class="sdtl_btn" type="button" aria-pressed="false">
-                <svg class="sdtl_btn__icon" viewBox="0 0 24 24" width="24px" height="24px" aria-hidden="true">
-                    <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                        <polyline points="12,1 12,10" />
-                        <circle fill="none" cx="12" cy="13" r="9" stroke-dasharray="49.48 7.07" stroke-dashoffset="10.6" />
-                    </g>
-                </svg>
-                <span class="sdtl_btn__sr">Power (Dark)</span>
-            </button>
-        </div>
-    </main>
+    @if ($step === 'switch-lamp')
+        <livewire:suts.home.switch-lamp />
+    @elseif($step === 'confetti-balloon')
+        <livewire:suts.home.confetti-balloon />
+    @elseif($step === 'story')
+        <livewire:suts.home.story />
+    @elseif($step === 'video-gallery')
+        <livewire:suts.home.video-gallery />
+    @elseif($step === 'cake')
+        <livewire:suts.home.cake />
+    @elseif($step === 'door')
+        <livewire:suts.home.door />
+    @elseif($step === 'firework')
+        <livewire:suts.home.firework />
+    @endif
 </div>
